@@ -5,7 +5,8 @@ db = client.test
 database = client['myinfo']
 collection = database["sudh"]
 
-record = collection.find()
-for i in record:
+
+#data = collection.find({'companyName': 'iNeuron'})
+d = collection.find({'courseOffered':{'$gt':'E'}})
+for i in d:
     print(i)
-    
